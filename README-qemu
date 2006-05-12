@@ -1,0 +1,17 @@
+The binaries are compiled with H.J.Lu toolchains
+http://www.linux-mips.org/wiki/Toolchains#H.J.Lu
+
+Changes in the uart.h:
+#define UART_BASE       0xB40003f8
+No skew between UART bytes
+
+To run this as BIOS, copy the  'mips_bios.bin'
+to the qemu/share/qemu/mips_bios.bin
+or use a '-L .' option.
+
+The 'reset' binary is just a tiny ELF stub
+to make qemu CLI parser happy.
+
+To run:
+$ qemu/bin/qemu-system-mips -nographic reset
+

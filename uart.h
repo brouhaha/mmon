@@ -19,18 +19,18 @@
    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
  */
 
-#define UART_BASE       0xB0800000
+#define UART_BASE       0xB40003f8
 #define UART_DATA       0x0
 #define UART_DLL        0x0
-#define UART_DLM        0x1 << 2
-#define UART_IER        0x1 << 2
-#define UART_IIR        0x2 << 2
-#define UART_FCR        0x2 << 2
-#define UART_LCR        0x3 << 2
-#define UART_MCR        0x4 << 2
-#define UART_LSR        0x5 << 2
-#define UART_MSR        0x6 << 2
-#define UART_SCR        0x7 << 2
+#define UART_DLM        0x1
+#define UART_IER        0x1
+#define UART_IIR        0x2
+#define UART_FCR        0x2
+#define UART_LCR        0x3
+#define UART_MCR        0x4
+#define UART_LSR        0x5
+#define UART_MSR        0x6
+#define UART_SCR        0x7
 
 
 #define UART_LCR_W      0x07    # Set UART to 8,N,2 & DLAB = 0

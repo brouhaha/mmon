@@ -86,9 +86,10 @@ STACK_INIT = RAM_BASE+RAM_SIZE-4
 
 
 reset_exception:
+	.globl	reset_exception
         .set noreorder
 
-
+	nop
         j       start                   # RESET entry point
         move    k0,zero
         j       start                   # Why are we doing this?
@@ -155,6 +156,7 @@ __start:
  * Write base address to PBC
  */
 
+/*
 #ifndef SIM
         la      t3, PBC_BASE            # Set up V961PBC base address
 	li	t4,K_1BASE
@@ -164,6 +166,7 @@ __start:
         nop
         nop
 #endif        
+*/
 
 
  /*
@@ -1518,7 +1521,7 @@ gl0:	jal	inch			# get a character
 	jal	outch
 	nop
 
-glcr:	j	$s0			# return
+glcr:	j	s0			# return
 	nop
 
 glbs:	la	s2,inbuf		# if at beginning of buffer, do
@@ -1600,7 +1603,8 @@ banner:
 	.ascii	"mmon: VR4300 mini-monitor, "
 	.ascii	"Copyright 1996, 2003 Eric Smith <eric@brouhaha.com>"
 	.byte	13,10
-	.ascii	"$Id$
+	.byte	0
+#	.ascii	"$Id$
 crlf_msg:
 	.byte	13,10,0
 
