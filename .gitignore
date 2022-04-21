@@ -1,0 +1,5 @@
+mmon
+*.dmp
+*.sr
+*.pr
+*.o
