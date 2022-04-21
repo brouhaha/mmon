@@ -1,4 +1,4 @@
-# mmon: MIPS VR4300 Mini-monitor
+# mmon: 64-bit MIPS mini-monitor (can operate without RAM)
 
 Copyright 1996, 2003 Eric Smith <eric@brouhaha.com>
 SPDX-License-IdentifierGPL-2.0-only
