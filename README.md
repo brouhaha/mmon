@@ -1,16 +1,23 @@
-mmon: MIPS VR4300 Mini-monitor
-Copyright 1996, 2003 Eric Smith <eric@brouhaha.com>
-http://www.brouhaha.com/~eric/software/mmon/
+# mmon: MIPS VR4300 Mini-monitor
 
-mmon is a tiny monitor program for the VR4300 MIPS processor.  It can
+Copyright 1996, 2003 Eric Smith <eric@brouhaha.com>
+SPDX-License-IdentifierGPL-2.0-only
+
+mmon development is hosted at the
+[mmon Github repository](https://github.com/brouhaha/mmon).
+
+## Introduction
+mmon is a tiny monitor program for the 64-bit MIPS processors.  It can
 operate with NO working RAM, using only the processor registers, so it
 can be useful for hardware bringup, including testing a RAM controller.
 
-With minor changes, mmon should be usable on other 64-bit MIPS processors.
+Originally mmon supported the VR4300 MIPS processor. With minor changes,
+mmon should be usable on other 64-bit MIPS processors.
 
-mmon was originally assembled using the SDE-MIPS tool chain from Algorithmics.
-This might still be available from MIPS, but it should be relatively easy
-to convert to the GNU toolchain.
+Alexander Voropay contributed support to use mmon on QEMU. This is now
+the main branch. See also the file README-qemu for details.
+
+The original VR4300 vresion of mmon is tagged as "v0.5" in the git repository.
 
 -----------------------------------------------------------------------------
 
